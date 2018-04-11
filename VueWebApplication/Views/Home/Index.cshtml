@@ -1,0 +1,27 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Styles {
+    
+      
+    
+      
+    
+      
+      <link href="@Url.Content(String.Format("{0}","/Scripts/dist/static/css/home.css?d04237218b0d23fe5261"))" rel="stylesheet">
+      
+    
+}
+
+<div id="app"></div>
+
+@section Scripts {
+    
+    <script src="@Url.Content(String.Format("{0}", "/Scripts/dist/manifest.js?d04237218b0d23fe5261"))"></script>
+    
+    <script src="@Url.Content(String.Format("{0}", "/Scripts/dist/vendor.js?d04237218b0d23fe5261"))"></script>
+    
+    <script src="@Url.Content(String.Format("{0}", "/Scripts/dist/home.js?d04237218b0d23fe5261"))"></script>
+    
+}

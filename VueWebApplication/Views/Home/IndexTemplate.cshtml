@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Styles {
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+      <% if (htmlWebpackPlugin.files.chunks[chunk].css != "") { %>
+      <link href="@Url.Content(String.Format("{0}","<%= htmlWebpackPlugin.files.chunks[chunk].css %>"))" rel="stylesheet">
+      <% } %>
+    <% } %>
+}
+
+<div id="app"></div>
+
+@section Scripts {
+    <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="@Url.Content(String.Format("{0}", "<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"))"></script>
+    <% } %>
+}
